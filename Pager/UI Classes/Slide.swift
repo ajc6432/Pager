@@ -1,9 +1,6 @@
 import UIKit
 
 class Slide: UIView, Loadable {
-    static var reuseID: String {
-        return String(describing: self)
-    }
 
     @IBOutlet weak var imageView: UIImageView!
 

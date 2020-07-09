@@ -5,9 +5,6 @@ protocol SlideDelegate {
 }
 
 class SliderView: UIView, UIScrollViewDelegate, Loadable, SlideDelegate {
-    static var reuseID: String {
-        return String(describing: self)
-    }
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
