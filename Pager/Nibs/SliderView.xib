@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="Pager" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5IK-1j-4Tm" customClass="SliderView" customModule="Pager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-Sr-gCN">
+                    <rect key="frame" x="0.0" y="44" width="430" height="852"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="tcP-hG-7xa"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="6mg-Hi-ehM"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pba-2a-vVy">
+                    <rect key="frame" x="80" y="793" width="254" height="37"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZE1-Sr-gCN" firstAttribute="leading" secondItem="ngw-Wa-Opb" secondAttribute="leading" id="9CR-V1-gaq"/>
+                <constraint firstItem="pba-2a-vVy" firstAttribute="top" secondItem="ZE1-Sr-gCN" secondAttribute="bottom" id="9rf-E2-dQG"/>
+                <constraint firstItem="ZE1-Sr-gCN" firstAttribute="top" secondItem="ngw-Wa-Opb" secondAttribute="top" id="DAv-iz-eSN"/>
+                <constraint firstItem="ngw-Wa-Opb" firstAttribute="trailing" secondItem="ZE1-Sr-gCN" secondAttribute="trailing" id="L3b-8T-Prt"/>
+                <constraint firstItem="ngw-Wa-Opb" firstAttribute="trailing" secondItem="pba-2a-vVy" secondAttribute="trailing" constant="80" id="WPV-7g-joY"/>
+                <constraint firstItem="pba-2a-vVy" firstAttribute="bottom" secondItem="ngw-Wa-Opb" secondAttribute="bottom" constant="-32" id="h6l-1e-knG"/>
+                <constraint firstItem="pba-2a-vVy" firstAttribute="leading" secondItem="ngw-Wa-Opb" secondAttribute="leading" constant="80" id="uj6-v9-Zr7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ngw-Wa-Opb"/>
+            <connections>
+                <outlet property="pageControl" destination="pba-2a-vVy" id="XlC-nS-SGT"/>
+                <outlet property="scrollView" destination="ZE1-Sr-gCN" id="9kv-4K-cMr"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </view>
+    </objects>
+</document>
